@@ -1,0 +1,31 @@
+"""
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Tiffin Dashboard</h2>
+<a href="/logout">Logout</a>
+
+<h3>Add / Update Tiffin</h3>
+<form method="post">
+    Date: <input type="date" name="date" value="{{today}}"><br>
+    Afternoon: <input type="number" name="afternoon"><br>
+    Night: <input type="number" name="night"><br>
+    <button type="submit">Save</button>
+</form>
+
+<h3>Records</h3>
+<table border="1">
+<tr><th>Date</th><th>Afternoon</th><th>Night</th></tr>
+{% for r in records %}
+<tr>
+<td>{{r[0]}}</td>
+<td>{{r[1]}}</td>
+<td>{{r[2]}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<h3>Total Bill: ₹{{total}}</h3>
+</body>
+</html>
+"""
